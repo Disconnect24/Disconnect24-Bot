@@ -13,15 +13,17 @@ description = """"""
 sourceCompatibility = 1.9
 targetCompatibility = 1.9
 tasks.withType(JavaCompile) {
-	options.encoding = 'UTF-8'
+    options.encoding = 'UTF-8'
 }
 
 repositories {
-     jcenter()
+    jcenter()
+    maven { url 'https://jitpack.io' }
+
 }
 dependencies {
-    compile group: 'net.dv8tion', name: 'JDA', version: '3.3.1_306'
-    compile group: 'com.jagrosh', name: 'JDA-Utilities', version: '1.8'
+    compile group: 'net.dv8tion', name: 'JDA', version: '3.3.1_316'
+    compile group: 'com.github.JDA-Applications', name: 'JDA-Utilities', version: 'version-major~2.0-SNAPSHOT'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.1'
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.9.1'
     compile group: 'redis.clients', name: 'jedis', version: '2.9.0'

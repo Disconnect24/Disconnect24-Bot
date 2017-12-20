@@ -1,11 +1,11 @@
 package xyz.rc24.bot.commands;
 
-import com.jagrosh.jdautilities.commandclient.Command.Category;
+import com.jagrosh.jdautilities.command.Command.Category;
 
 public class Categories {
 
     public static final Category ADMIN = new Category("Bot Administration", event -> {
-        if (event.isOwner() || event.isCoOwner())
+        if (event.isOwner())
             return true;
         else {
             event.replyError("You don't have access to this command!");

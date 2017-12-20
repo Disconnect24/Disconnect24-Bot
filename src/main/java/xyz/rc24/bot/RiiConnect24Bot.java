@@ -24,7 +24,7 @@
 
 package xyz.rc24.bot;
 
-import com.jagrosh.jdautilities.commandclient.CommandClientBuilder;
+import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.waiter.EventWaiter;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDABuilder;
@@ -82,7 +82,6 @@ public class RiiConnect24Bot extends ListenerAdapter {
         EventWaiter waiter = new EventWaiter();
 
         CommandClientBuilder client = new CommandClientBuilder();
-        client.setGame(Game.of("Loading..."));
         client.setEmojis(Const.DONE_E, Const.WARN_E, Const.FAIL_E);
         client.setOwnerId("" + config.getPrimaryOwner());
 
@@ -128,7 +127,7 @@ public class RiiConnect24Bot extends ListenerAdapter {
         JDABuilder builder = new JDABuilder(AccountType.BOT)
                 .setToken(config.getToken())
                 .setStatus(config.getStatus())
-                .setGame(Game.of(Const.GAME_0))
+                .setGame(Game.playing(Const.GAME_0))
                 .addEventListener(waiter)
                 .addEventListener(client.build())
                 .addEventListener(new RiiConnect24Bot())
