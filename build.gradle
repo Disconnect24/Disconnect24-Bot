@@ -1,11 +1,7 @@
-plugins {
-    id "org.ajoberstar.grgit" version "2.0.1"
-}
-
 apply plugin: 'java'
 apply plugin: 'maven'
 
-group = 'xyz.rc24.bot'
+group = 'xyz.disconnec24.bot'
 version = '2.0.0'
 
 description = """"""
@@ -22,7 +18,7 @@ repositories {
 
 }
 dependencies {
-    compile group: 'net.dv8tion', name: 'JDA', version: '3.3.1_316'
+    compile group: 'net.dv8tion', name: 'JDA', version: '3.4.0_323'
     compile group: 'com.github.JDA-Applications', name: 'JDA-Utilities', version: 'version-major~2.0-SNAPSHOT'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.1'
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.9.1'
@@ -43,8 +39,8 @@ jar {
     manifest {
         attributes(
                 'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                'Main-Class': 'xyz.rc24.bot.RiiConnect24Bot',
-                'Implementation-Title': 'RC24 Bot',
+                'Main-Class': 'xyz.disconnect24.bot.Main',
+                'Implementation-Title': 'Disconnect24 Bot',
                 'Implementation-Version': version,
         )
     }
@@ -54,17 +50,4 @@ jar {
         exclude "META-INF/*.RSA"
     }
     from "$buildDir/resources/info.properties"
-}
-
-task createBuildInfoFile(dependsOn: processResources) {
-    doLast {
-        def buildInfoFile = new File("$buildDir/resources/info.properties")
-        Properties props = new Properties()
-        props.setProperty('commit', grgit.head().abbreviatedId)
-        props.store(buildInfoFile.newWriter(), "Build information for usage with the about command.")
-    }
-}
-
-classes {
-    dependsOn createBuildInfoFile
 }
