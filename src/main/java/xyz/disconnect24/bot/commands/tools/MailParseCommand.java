@@ -8,7 +8,7 @@ import xyz.disconnect24.bot.commands.Categories;
 public class MailParseCommand extends Command {
     public MailParseCommand() {
         this.name = "patch";
-        this.help = "Patches your `nwc24msg.cfg` for use with RiiConnect24.";
+        this.help = "Patches your `nwc24msg.cfg` for use with Disconnect24.";
         this.category = Categories.TOOLS;
         this.botPermissions = new Permission[]{Permission.MESSAGE_WRITE};
         this.userPermissions = new Permission[]{Permission.MESSAGE_WRITE};

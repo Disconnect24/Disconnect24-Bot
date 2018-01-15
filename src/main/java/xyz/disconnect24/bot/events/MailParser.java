@@ -41,7 +41,7 @@ public class MailParser {
         }
 
         byte[] mailDomain = new byte[40];
-        byte[] mailString = "@disconnect24.xyz".getBytes();
+        byte[] mailString = "@mail.disconnect24.xyz".getBytes();
         // We copy the string into the domain to preserve length.
         System.arraycopy(mailString, 0, mailDomain, 0, mailString.length);
         // Then, we copy the domain into its proper place in the file.
@@ -55,7 +55,7 @@ public class MailParser {
         for (String type : engineTypes) {
             // We create a byte[] with the proper length for the engine.
             byte[] sizedEngineURL = new byte[80];
-            byte[] engineURL = ("http://mail.disconnect24.xyz/cgi-bin/" + type + ".cgi").getBytes();
+            byte[] engineURL = ("http://scripts.disconnect24.xyz/cgi-bin/" + type + ".cgi").getBytes();
             // Then, we copy the engine URL (in string) to the proper length, to preserve size.
             System.arraycopy(engineURL, 0, sizedEngineURL, 0, engineURL.length);
 
