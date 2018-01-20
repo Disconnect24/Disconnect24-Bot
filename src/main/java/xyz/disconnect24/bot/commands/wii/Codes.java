@@ -26,7 +26,7 @@ package xyz.disconnect24.bot.commands.wii;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
-import com.jagrosh.jdautilities.utils.FinderUtil;
+import com.jagrosh.jdautilities.commons.utils.FinderUtil;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.ChannelType;
