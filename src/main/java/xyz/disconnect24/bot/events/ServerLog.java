@@ -48,7 +48,7 @@ public class ServerLog extends ListenerAdapter {
     @Override
     public void onGuildMemberLeave(GuildMemberLeaveEvent event) {
         try {
-            if (!event.getGuild().getBans().complete().contains(event.getUser())) {
+            if (!event.getGuild().getBanList().complete().contains(event.getUser())) {
                 EmbedBuilder builder = getEmbed("A user left the server!",
                         "#FFEB3B",
                         event.getUser());

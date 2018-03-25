@@ -120,7 +120,6 @@ public class Main extends ListenerAdapter {
                 .addEventListener(client.build())
                 .addEventListener(new Main())
                 .addEventListener(new ServerLog())
-                .addEventListener(new MailParseListener())
                 .buildBlocking();
     }
 
