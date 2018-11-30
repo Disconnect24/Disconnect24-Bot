@@ -3,9 +3,9 @@
 ![Production List](https://img.shields.io/discord/397593815755522068.svg)
 
 ## How do I set this up?
-Check out the following steps:
-1. You'll need to have Redis and Gradle installed. (PowerTip: You can always stick with what version of gradle is being used currently by substituting all usages of `gradle` with `./gradlew` or `gradlew.bat`.)
-2. We'll create the Redis structures as we go, so no need to set anything up.
-3. `git clone` the repo somewhere and `cd` into it.
-4. `gradle build`! And... tada! That's it. 🎉 You can find JAR(s) created in `build/libs`.
-5. For running, double check you have redis started. Also, if `config.yml` can't be found, it'll copy a default copy to the current directory for you.
+*An installation of NodeJS is required before you can successfully set this up.*
+1. Create a clone of this Github Repository
+2. `cd` into the directory of the downloaded folder
+3. Generate a package.json file by running `npm init`, everything can be set to your preference; except the entry point must be `bot.js`.
+4. Install discord.js by running `npm install --save discord.js`.
+5. Run `start.bat`!
