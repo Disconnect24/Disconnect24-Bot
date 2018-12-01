@@ -54,4 +54,8 @@ bot.on('message', function(msg) {
     if (command === "code") {
         require(`./Commands/code.js`).run(bot, config, msg, args, suffix, Discord, color)
     }
+    
+    if (command === "eval") {
+        require(`./Commands/eval.js`).run(bot, config, msg, args, suffix, Discord, color)
+    }
 })
