@@ -9,3 +9,5 @@
 3. Generate a package.json file by running `npm init`, everything can be set to your preference; except the entry point must be `bot.js`.
 4. Install discord.js by running `npm install --save discord.js`.
 5. Run `start.bat`!
+
+Please note, if you decide to not use Nodemon, you will need to update `start.bat` to run `node bot.js` rather than `nodemon bot.js`.
